@@ -1,0 +1,86 @@
+/*---------------------------- Fonts ------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/*----------------------------- Reset ------------------------------*/
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/*------------------------ Presets --------------------------------*/
+:root {
+    --cafeFont: 'Pacifico', cursive;
+    --mainFont: 'Josefin Sans', sans-serif;
+    --bgColor: #eeece7;
+    --highLight: #dfd2cc;
+    --lightBrown: #af7d64;
+    --darkBrown: #522600;
+    --textColor: #3a1f08;
+}
+/*----------------------- Estilos ------------------------------*/
+body {
+    background: var(--bgColor);
+    background-image: url("../assets/background.png");
+    background-size:auto;
+}
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#homeCont {
+    margin: 7% 0% 0% 0%;
+    width: 70%;
+    background: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.1rem 1rem 0.1rem var(--highLight);
+}
+img{
+    width: 20%;
+    border: 5px solid var(--highLight);
+    border-radius: 50%;
+    margin: 1rem 0rem 0rem 0rem;
+}
+h1{
+    margin: 0% 0% 3% 0%;
+    color: var(--textColor);
+    font-family: var(--cafeFont);
+    font-size: calc(2rem + 1.5vw);
+}
+#btnCont {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    margin: 2rem;
+}
+.btnLink{
+    width: 40%;
+}
+button{
+    width:100%;
+    height: calc(5rem + 1.5vw);
+    border: none;
+    border-radius: 1rem;
+    background: var(--lightBrown);
+    color: var(--bgColor);
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 2vw);
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem var(--highLight);
+    transition: 0.8s;
+}
+
+button:hover{
+    transform: scale(110%);
+    background: var(--bgColor);
+    border: 0.3rem solid var(--lightBrown);
+    color: var(--lightBrown);
+}
+
