@@ -1,0 +1,173 @@
+{
+    "menu": [
+        {
+            "breakfast": [
+                {
+                    "category": "Café",
+                    "items": [
+                        {
+                           "item": "Americano",
+                           "price": 5,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Catpuccino",
+                            "price": 6,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Meowcaccino",
+                            "price": 7,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                },
+                {
+                    "category": "Refrescos",
+                    "items": [
+                        {
+                           "item": "Jugo de frutas natural",
+                           "price": 6,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Té Helado",
+                            "price": 4,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Smoothie de frutas",
+                            "price": 8,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                },
+                {
+                    "category": "Sándwiches",
+                    "items": [
+                        {
+                           "item": "Sándwich de jamón y queso",
+                           "price": 10,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Sándwich vegetariano",
+                            "price": 8,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                },
+                {
+                    "category": "Pastelería",
+                    "items": [
+                        {
+                           "item": "Muffin",
+                           "price": 7,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Croissant",
+                            "price": 5,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "lunch": [
+                {
+                    "category": "Café",
+                    "items": [
+                        {
+                           "item": "Americano",
+                           "price": 5,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Catpuccino",
+                            "price": 6,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Meowcaccino",
+                            "price": 7,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                },
+                {
+                    "category": "Refrescos",
+                    "items": [
+                        {
+                           "item": "Jugo de frutas natural",
+                           "price": 6,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Té Helado",
+                            "price": 4,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Smoothie de frutas",
+                            "price": 8,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Milkshake",
+                            "price": 8,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Bebida 500ml",
+                            "price": 8,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Agua mineral 500ml",
+                            "price": 8,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                },
+                {
+                    "category": "Hamburguesas",
+                    "items": [
+                        {
+                           "item": "Hamburguesa simple",
+                           "price": 10,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Hamburguesa doble",
+                            "price": 15,
+                            "picture": "./src/assets/01.jpg" 
+                        }
+                    ]
+                },
+                {
+                    "category": "Acompañamientos",
+                    "items": [
+                        {
+                           "item": "Papas fritas",
+                           "price": 5,
+                           "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Aros de cebolla",
+                            "price": 5,
+                            "picture": "./src/assets/01.jpg" 
+                        },
+                        {
+                            "item": "Empanadas de queso",
+                            "price": 5,
+                            "picture": "./src/assets/01.jpg"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+}
