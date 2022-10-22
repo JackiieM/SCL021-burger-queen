@@ -83,4 +83,10 @@ h1{
     border: 0.3rem solid var(--lightBrown);
     color: var(--lightBrown);
 }
+.mainBtns:focus{
+    transform: scale(110%);
+    background: var(--bgColor);
+    border: 0.3rem solid var(--lightBrown);
+    color: var(--lightBrown);
+}
 

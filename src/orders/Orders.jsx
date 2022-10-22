@@ -1,7 +1,15 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { MenuCategories } from '../components/MenuCategories'
 import './orders.css'
 export const Orders = () => {
+    const [menuChoice, setMenuChoice] = useState(true);
+    const setAm = () => {
+        setMenuChoice(true)
+    }
+    const setPm = () => {
+        setMenuChoice(false)
+    }
     return (
         <div id="ordersCont">
             <header>
@@ -16,13 +24,13 @@ export const Orders = () => {
             <div id="ordersBody">
                 <section id="menuItems">
                     <div id="menuTime">
-                        <button className="menuBtn">AM<img src="https://api.iconify.design/charm/sun.svg?color=%23eeece7&width=50&height=50"/></button>
-                        <button className="menuBtn">PM<img src="https://api.iconify.design/tabler/sunset-2.svg?color=%23eeece7&width=50&height=50"/></button>
+                        <button className="menuBtn" onClick={setAm}>AM<img src="https://api.iconify.design/charm/sun.svg?color=%23eeece7&width=50&height=50"/></button>
+                        <button className="menuBtn" onClick={setPm}>PM<img src="https://api.iconify.design/tabler/sunset-2.svg?color=%23eeece7&width=50&height=50"/></button>
                     </div>
                     <div id="menuCategoryCont">
-                        <div className="menuCategory">
-                            <MenuCategories/>
-                        </div>
+                        
+                            <MenuCategories selection={menuChoice}/>
+                        
                     </div>                       
                 </section>
                 <section id="orderList">

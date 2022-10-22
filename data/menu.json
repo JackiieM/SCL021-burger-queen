@@ -8,17 +8,17 @@
                         {
                            "item": "Americano",
                            "price": 5,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/americano.jpg" 
                         },
                         {
                             "item": "Catpuccino",
                             "price": 6,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/catpuccino.jpg" 
                         },
                         {
                             "item": "Meowcaccino",
                             "price": 7,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/mocca.jpg" 
                         }
                     ]
                 },
@@ -26,19 +26,19 @@
                     "category": "Refrescos",
                     "items": [
                         {
-                           "item": "Jugo de frutas natural",
+                           "item": "Jugo de frutas",
                            "price": 6,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/juice.jpg" 
                         },
                         {
                             "item": "Té Helado",
                             "price": 4,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/icedtea.jpg" 
                         },
                         {
                             "item": "Smoothie de frutas",
                             "price": 8,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/smoothie.jpg" 
                         }
                     ]
                 },
@@ -46,14 +46,14 @@
                     "category": "Sándwiches",
                     "items": [
                         {
-                           "item": "Sándwich de jamón y queso",
+                           "item": "Sándwich jamón/queso",
                            "price": 10,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/hamncheese.jpg" 
                         },
                         {
                             "item": "Sándwich vegetariano",
                             "price": 8,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/veg.jpg" 
                         }
                     ]
                 },
@@ -63,12 +63,12 @@
                         {
                            "item": "Muffin",
                            "price": 7,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/muffin.jpg" 
                         },
                         {
                             "item": "Croissant",
                             "price": 5,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/croissant.jpg" 
                         }
                     ]
                 }
@@ -82,17 +82,17 @@
                         {
                            "item": "Americano",
                            "price": 5,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/americano.jpg" 
                         },
                         {
                             "item": "Catpuccino",
                             "price": 6,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/catpuccino.jpg" 
                         },
                         {
                             "item": "Meowcaccino",
                             "price": 7,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/mocca.jpg" 
                         }
                     ]
                 },
@@ -100,34 +100,34 @@
                     "category": "Refrescos",
                     "items": [
                         {
-                           "item": "Jugo de frutas natural",
+                           "item": "Jugo de frutas",
                            "price": 6,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/juice.jpg" 
                         },
                         {
                             "item": "Té Helado",
                             "price": 4,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/icedtea.jpg" 
                         },
                         {
                             "item": "Smoothie de frutas",
                             "price": 8,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/smoothie.jpg" 
                         },
                         {
                             "item": "Milkshake",
                             "price": 8,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/smoothie.jpg" 
                         },
                         {
                             "item": "Bebida 500ml",
-                            "price": 8,
-                            "picture": "./src/assets/01.jpg" 
+                            "price": 5,
+                            "picture": "./src/assets/menuPics/icedtea.jpg" 
                         },
                         {
                             "item": "Agua mineral 500ml",
-                            "price": 8,
-                            "picture": "./src/assets/01.jpg" 
+                            "price": 2,
+                            "picture": "./src/assets/menuPics/icedtea.jpg" 
                         }
                     ]
                 },
@@ -137,12 +137,12 @@
                         {
                            "item": "Hamburguesa simple",
                            "price": 10,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/hamncheese.jpg" 
                         },
                         {
                             "item": "Hamburguesa doble",
                             "price": 15,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/hamncheese.jpg" 
                         }
                     ]
                 },
@@ -152,17 +152,17 @@
                         {
                            "item": "Papas fritas",
                            "price": 5,
-                           "picture": "./src/assets/01.jpg" 
+                           "picture": "./src/assets/menuPics/veg.jpg" 
                         },
                         {
                             "item": "Aros de cebolla",
                             "price": 5,
-                            "picture": "./src/assets/01.jpg" 
+                            "picture": "./src/assets/menuPics/veg.jpg" 
                         },
                         {
                             "item": "Empanadas de queso",
                             "price": 5,
-                            "picture": "./src/assets/01.jpg"
+                            "picture": "./src/assets/menuPics/veg.jpg"
                         }
                     ]
                 }
