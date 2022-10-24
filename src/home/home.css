@@ -76,7 +76,6 @@ h1{
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem var(--highLight);
     transition: 0.8s;
 }
-
 .mainBtns:hover{
     transform: scale(110%);
     background: var(--bgColor);
