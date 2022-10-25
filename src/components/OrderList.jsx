@@ -1,16 +1,37 @@
-import { OrderItems } from "./OrderItems"
+import { newOrder } from "../../firebase/firebase";
+import { OrderItems } from "./OrderItems";
+import { useState } from "react";
 export const OrderList = ({order, setOrder}) => {
+
+    const [customer, setCustomer] = useState("");
+    const [table, setTable] = useState(1)
+
+    const onOptionChange = (event) => {
+        setTable(event.target.value)
+    }
+    const onInputChange = (event) => {
+        setCustomer(event.target.value)
+    }
     const clearOrder = () => {
         setOrder([])
+    }
+    const createNewOrder = () => {
+        newOrder(table, customer, order, "pending")
+        .then(success => {
+            console.log("Pedido enviado :)")
+        })
+        .catch(err =>{
+            console.log(err)
+        })
     }
 
     return (
         <>
             <div id="orders">
                 <div id="topCont">
-                    <input type="text" id="nameInput" placeholder="Clientx..."/>
+                    <input type="text" id="nameInput" value={customer} placeholder="Clientx..." onChange={event => onInputChange(event)}/>
                     <p>Mesa:</p>
-                    <select id="tableSelect">
+                    <select id="tableSelect" onChange={event => onOptionChange(event)}>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -30,7 +51,7 @@ export const OrderList = ({order, setOrder}) => {
                     <p >Total: ${order.length < 1  ? 0 : order.map(item => parseInt(item.price)).reduce((a,b)=> a+b)}.00</p>
                 </div>
                 <div id="sendCont">
-                    <button id="sendBtn">Enviar</button>
+                    <button id="sendBtn" onClick={(event) => createNewOrder(event)}>Enviar</button>
                 </div>
             </div>
         </>
