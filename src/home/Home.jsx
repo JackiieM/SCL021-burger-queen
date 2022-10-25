@@ -4,7 +4,7 @@ import './home.css';
 export const Home = () => {
     return (
         <section id="homeCont">
-            <img src='./src/assets/logo.png'/>
+            <img id="logo" src='./src/assets/logo.png'/>
             <h1>Purrfect Cat Café</h1>
             <div id="btnCont">
                 <Button title="Pedidos" url="/pedidos"/>

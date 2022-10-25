@@ -41,7 +41,7 @@ body {
     border-radius: 2rem;
     box-shadow: 0.1rem 0.1rem 1rem 0.1rem var(--highLight);
 }
-img{
+#logo{
     width: 20%;
     border: 5px solid var(--highLight);
     border-radius: 50%;
@@ -64,7 +64,7 @@ h1{
 .btnLink{
     width: 40%;
 }
-button{
+.mainBtns{
     width:100%;
     height: calc(5rem + 1.5vw);
     border: none;
@@ -76,8 +76,13 @@ button{
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem var(--highLight);
     transition: 0.8s;
 }
-
-button:hover{
+.mainBtns:hover{
+    transform: scale(110%);
+    background: var(--bgColor);
+    border: 0.3rem solid var(--lightBrown);
+    color: var(--lightBrown);
+}
+.mainBtns:focus{
     transform: scale(110%);
     background: var(--bgColor);
     border: 0.3rem solid var(--lightBrown);
