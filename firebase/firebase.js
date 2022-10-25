@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs, doc, setDoc, Timestamp } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyBq58JGX4myrbrc9xVdtEfUdKySszHo6h0",
     authDomain: "purrfect-cafe-c2bc4.firebaseapp.com",
@@ -11,3 +11,16 @@ const firebaseConfig = {
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+
+  // Add a new document in collection "cities"
+const newOrder = async(table, customer, order, state) => {
+   await setDoc(doc(db, "orders", customer), {
+    customer: customer,
+    table: table,
+    time: Timestamp.fromDate(new Date()),
+    items: order,
+    state: state,
+  });
+}
+
+export {newOrder}
