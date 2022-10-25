@@ -12,17 +12,18 @@ export const ListMenu = ({element, order, setOrder}) => {
     const addOrder = (event) => {
         const selectedItem = event.target.getAttribute("id");
         const selectedItemCost = event.target.getAttribute("cost");
-        console.log(selectedItem)
-        
-        //cómo puedo hacer que valide si el item ya existe y en case que sí, sumar a la cantidad
-        
-        if(order.length > 0){
-            order.map(item => item.item === selectedItem ? item.quantity: item.quantity + 1)
-        } 
-        setOrder([...order, {item:selectedItem, price: selectedItemCost, quantity: 1}])
-        
+        const exists = order.findIndex(item => item.item === selectedItem);
+
+        if(exists === -1){
+            setOrder([...order, {item:selectedItem, price: selectedItemCost, quantity: 1}])
+        } else {
+            let orderTmp = [...order];
+            orderTmp[exists].quantity = orderTmp[exists].quantity +1
+            orderTmp[exists].price = selectedItemCost * orderTmp[exists].quantity
+            setOrder(orderTmp)
+        }
     }
-console.log(order)
+
     return (
         <>
         <button key={element.category} className="menuCategory" onClick={event => dropDownStay(event)}>

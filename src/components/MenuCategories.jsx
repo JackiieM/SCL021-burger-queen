@@ -26,7 +26,7 @@ export const MenuCategories = ({selection, order, setOrder}) => {
             {
                 MenuData && amMenu.map( element => 
                     (
-                        < ListMenu element={element} order={order} setOrder={setOrder}/>
+                        < ListMenu element={element} order={order} setOrder={setOrder} key={element.category}/>
                     )
                 )
             }
@@ -37,7 +37,7 @@ export const MenuCategories = ({selection, order, setOrder}) => {
                 {
                     MenuData && pmMenu.map( element => 
                         (
-                            < ListMenu element={element} order={order} setOrder={setOrder}/>
+                            < ListMenu element={element} order={order} setOrder={setOrder} key={element.category}/>
                         )
                     )
                 }
