@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { MenuCategories } from '../components/MenuCategories'
+import { OrderList } from "../components/OrderList"
 import './orders.css'
 export const Orders = () => {
     const [menuChoice, setMenuChoice] = useState(true);
@@ -10,6 +11,10 @@ export const Orders = () => {
     const setPm = () => {
         setMenuChoice(false)
     }
+// Este useState lo envío desde los props al listado del menú para tomar la orden con setOrder
+// y luego mandar la data en order por props a donde imprimo la lista actual del pedido
+    const [order, setOrder] = useState([]);
+
     return (
         <div id="ordersCont">
             <header>
@@ -29,12 +34,12 @@ export const Orders = () => {
                     </div>
                     <div id="menuCategoryCont">
                         
-                            <MenuCategories selection={menuChoice}/>
+                            <MenuCategories selection={menuChoice} order={order} setOrder={setOrder}/>
                         
                     </div>                       
                 </section>
                 <section id="orderList">
-
+                    <OrderList order={order} setOrder={setOrder}/>
                 </section>
             </div>
         </div>

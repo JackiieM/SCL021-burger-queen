@@ -3,7 +3,7 @@ import MenuData from "../../data/menu.json";
 import { ListMenu } from "./ListMenu";
 //import { MenuItemsComp } from "./MenuItems"; 
 
-export const MenuCategories = ({selection}) => {
+export const MenuCategories = ({selection, order, setOrder}) => {
     const [breakfast, lunch] = MenuData.menu;
     const amMenu = breakfast.breakfast
     const pmMenu = lunch.lunch
@@ -26,7 +26,7 @@ export const MenuCategories = ({selection}) => {
             {
                 MenuData && amMenu.map( element => 
                     (
-                        < ListMenu element={element}/>
+                        < ListMenu element={element} order={order} setOrder={setOrder}/>
                     )
                 )
             }
@@ -37,7 +37,7 @@ export const MenuCategories = ({selection}) => {
                 {
                     MenuData && pmMenu.map( element => 
                         (
-                            < ListMenu element={element}/>
+                            < ListMenu element={element} order={order} setOrder={setOrder}/>
                         )
                     )
                 }

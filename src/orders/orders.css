@@ -95,7 +95,9 @@ ul{
     box-shadow:  3px 3px 8px #cab3b3;
 }
 
-
+.category {
+    width: 100%;
+}
 .categoryName {
     color: var(--textColor);
     font-family: var(--mainFont);
@@ -131,7 +133,7 @@ ul{
     padding: 1%;
     box-shadow:  3px 3px 8px #cab3b3,
                 -3px -3px 8px var(--bgColor);
-    transition: 0.2s;
+    transition: 0.5s;
 }
 .item:hover {
     transform: scale(105%);
@@ -159,4 +161,105 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 100px;
+}
+#orderList {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+#topCont {
+    width: 100%;
+    height: 5rem;
+    background: var(--lightBrown);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+#topCont p{
+    color: var(--bgColor);
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1vw)
+}
+#nameInput {
+    width: 60%;
+    height: 4rem;
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1vw);
+    padding: 1%;
+}
+#tableSelect {
+    width: 15%;
+    height: 4rem;
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+}
+#itemsCont {
+    width: 100%;
+    background: var(--highLight);
+    height: 26rem;
+    overflow-y: scroll;
+}
+.descriptionCont {
+    display: flex;
+    margin: 1%;
+    padding: 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+.deleteBtn {
+    width: 8%;
+}
+.orderListDescription {
+    font-family: var(--mainFont);
+    color: var(--textColor);
+    font-size: calc(1.3rem + 1vw);
+}
+.orderName {
+    width: 40%;
+}
+hr{
+    height: 5px;
+}
+#bottomCont {
+    width: 100%;
+    background: var(--lightBrown);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+#bottomCont p {
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1.5vw);
+    color: var(--bgColor);
+}
+#clearBtn {
+    background: var(--delBtn);
+    border: none;
+    width: 25%;
+    height: 5rem;
+    border-radius: 25px;
+    font-family: var(--mainFont);
+    color: var(--bgColor);
+    font-size: calc(1rem + 1vw);
+}
+#sendCont {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+#sendBtn {
+    background: var(--okBtn);
+    border: none;
+    width: 25%;
+    height: 5rem;
+    border-radius: 25px;
+    font-family: var(--mainFont);
+    color: var(--bgColor);
+    font-size: calc(1rem + 1vw);
+    
 }
