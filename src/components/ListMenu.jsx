@@ -15,7 +15,7 @@ export const ListMenu = ({element, order, setOrder}) => {
         const exists = order.findIndex(item => item.item === selectedItem);
 
         if(exists === -1){
-            setOrder([...order, {item:selectedItem, price: selectedItemCost, quantity: 1}])
+            setOrder([...order, {item:selectedItem, price: parseInt(selectedItemCost), quantity: 1}])
         } else {
             let orderTmp = [...order];
             orderTmp[exists].quantity = orderTmp[exists].quantity +1
@@ -42,7 +42,7 @@ export const ListMenu = ({element, order, setOrder}) => {
                 </div> 
             )
         )
-    }
+    }   
             </div>
         </>
     )

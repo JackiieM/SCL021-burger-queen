@@ -200,7 +200,7 @@ ul{
 #itemsCont {
     width: 100%;
     background: var(--highLight);
-    height: 26rem;
+    height: 23rem;
     overflow-y: scroll;
 }
 .descriptionCont {

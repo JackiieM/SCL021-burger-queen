@@ -122,7 +122,7 @@
                         {
                            "item": "Hamburguesa simple",
                            "price": 10,
-                           "picture": "./src/assets/menuPics/hamncheese.jpg" 
+                           "picture": "./src/assets/menuPics/hamncheese.jpg"
                         },
                         {
                             "item": "Hamburguesa doble",

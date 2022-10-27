@@ -4,16 +4,18 @@ import { useState } from "react";
 export const OrderList = ({order, setOrder}) => {
 
     const [customer, setCustomer] = useState("");
-    const [table, setTable] = useState(1)
+    const [table, setTable] = useState(1);
 
     const onOptionChange = (event) => {
         setTable(event.target.value)
+        
     }
     const onInputChange = (event) => {
         setCustomer(event.target.value)
     }
     const clearOrder = () => {
         setOrder([])
+        setCustomer("")
     }
     const createNewOrder = () => {
         newOrder(table, customer, order, "pending")
@@ -24,7 +26,7 @@ export const OrderList = ({order, setOrder}) => {
             console.log(err)
         })
     }
-
+console.log(customer)
     return (
         <>
             <div id="orders">
@@ -48,10 +50,10 @@ export const OrderList = ({order, setOrder}) => {
                     un elemento, luego hacemos un map para obtener los precios de los items en order
                     y los pasamos por parseInt para transformarlos en valores numericos. Finalmente,
                     se suma todo con un array.reduce*/}
-                    <p >Total: ${order.length < 1  ? 0 : order.map(item => parseInt(item.price)).reduce((a,b)=> a+b)}.00</p>
+                    <p >Total: ${order.length < 1  ? 0 : order.map(item => item.price).reduce((a,b)=> a+b)}.00</p>
                 </div>
                 <div id="sendCont">
-                    <button id="sendBtn" onClick={(event) => createNewOrder(event)}>Enviar</button>
+                    <button id="sendBtn" onClick={() => createNewOrder()}>Enviar</button>
                 </div>
             </div>
         </>
