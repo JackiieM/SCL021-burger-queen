@@ -273,3 +273,13 @@ hr{
     font-size: calc(1rem + 1vw);
 }
 
+.swalInput {
+    font-family: var(--mainFont);
+    background: var(--highLight);
+    font-size: calc(0.5rem + 1vw);
+}
+.swalProgress{
+    background: var(--darkBrown);
+    font-size: large;
+}
+
