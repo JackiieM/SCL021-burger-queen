@@ -263,3 +263,13 @@ hr{
     font-size: calc(1rem + 1vw);
     
 }
+.popUpTitle {
+    font-family: var(--mainFont);
+    font-size: calc(2rem + 1vw);
+}
+
+.popUpText {
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1vw);
+}
+

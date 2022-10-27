@@ -1,10 +1,15 @@
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 import { newOrder } from "../../firebase/firebase";
 import { OrderItems } from "./OrderItems";
 import { useState } from "react";
+
 export const OrderList = ({order, setOrder}) => {
 
     const [customer, setCustomer] = useState("");
     const [table, setTable] = useState(1);
+
 
     const onOptionChange = (event) => {
         setTable(event.target.value)
@@ -17,16 +22,50 @@ export const OrderList = ({order, setOrder}) => {
         setOrder([])
         setCustomer("")
     }
+
+    const MySwal = withReactContent(Swal)
     const createNewOrder = () => {
-        newOrder(table, customer, order, "pending")
-        .then(success => {
-            console.log("Pedido enviado :)")
-        })
-        .catch(err =>{
-            console.log(err)
-        })
+        if(customer === ""){
+                MySwal.fire({
+                title: <h1 className='popUpTitle'>Whoops!</h1>,
+                html: <p className='popUpText'>Tienes que ingresar el nombre del cliente</p>, 
+                icon: "error",
+                confirmButtonText: "Volver",
+                color: "#3a1f08",
+                background: "#dfd2cc",
+                confirmButtonColor: "#af7d64",
+
+            })
+        } else if(order.length === 0){
+            MySwal.fire({
+                title: <h1 className='popUpTitle'>Whoops!</h1>,
+                html: <p className='popUpText'>No hay items en este pedido</p>, 
+                icon: "error",
+                confirmButtonText: "Volver",
+                color: "#3a1f08",
+                background: "#dfd2cc",
+                confirmButtonColor: "#af7d64",
+
+            })
+        }else {
+            newOrder(table, customer, order, "pending")
+            .then(() => {
+                MySwal.fire({
+                    title: <h1 className='popUpTitle'>Purrfect!</h1>,
+                    html: <p className='popUpText'>El pedido fue enviado a la cocina</p>,
+                    icon: "success",
+                    confirmButtonText: "Volver",
+                    color: "#3a1f08",
+                    background: "#dfd2cc",
+                    confirmButtonColor: "#af7d64",
+                })
+            })
+            .catch(err =>{
+                console.log(err)
+            })
+        }
     }
-console.log(customer)
+
     return (
         <>
             <div id="orders">
