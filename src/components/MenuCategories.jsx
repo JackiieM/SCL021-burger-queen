@@ -30,8 +30,7 @@ export const MenuCategories = ({selection, order, setOrder}) => {
                         element={element} 
                         order={order} 
                         setOrder={setOrder} 
-                        key={element.category} 
-                        dialog={setToggleDialog}/>
+                        key={element.category}/>
                     )
                 )
             }
@@ -46,8 +45,7 @@ export const MenuCategories = ({selection, order, setOrder}) => {
                             element={element} 
                             order={order} 
                             setOrder={setOrder} 
-                            key={element.category} 
-                            dialog={setToggleDialog}/>
+                            key={element.category}/>
                         )
                     )
                 }

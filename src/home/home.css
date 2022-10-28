@@ -8,6 +8,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+
 }
 /*------------------------ Presets --------------------------------*/
 :root {
@@ -22,8 +23,9 @@
 /*----------------------- Estilos ------------------------------*/
 body {
     background: var(--bgColor);
-    background-image: url("../assets/background.png");
+    background-image: url("/background.png");
     background-size:auto;
+    overflow: hidden;
 }
 #root{
     display: flex;
@@ -62,7 +64,7 @@ h1{
     margin: 2rem;
 }
 .btnLink{
-    width: 40%;
+    width: 50%;
 }
 .mainBtns{
     width:100%;
@@ -82,7 +84,7 @@ h1{
     border: 0.3rem solid var(--lightBrown);
     color: var(--lightBrown);
 }
-.mainBtns:focus{
+.mainBtns:active{
     transform: scale(110%);
     background: var(--bgColor);
     border: 0.3rem solid var(--lightBrown);

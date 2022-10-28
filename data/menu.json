@@ -8,17 +8,17 @@
                         {
                            "item": "Americano",
                            "price": 5,
-                           "picture": "./src/assets/menuPics/americano.jpg" 
+                           "picture": "/menuPics/americano.jpg" 
                         },
                         {
                             "item": "Catpuccino",
                             "price": 6,
-                            "picture": "./src/assets/menuPics/catpuccino.jpg" 
+                            "picture": "/menuPics/catpuccino.jpg" 
                         },
                         {
                             "item": "Meowcaccino",
                             "price": 7,
-                            "picture": "./src/assets/menuPics/mocca.jpg" 
+                            "picture": "/menuPics/mocca.jpg" 
                         }
                     ]
                 },
@@ -28,17 +28,17 @@
                         {
                            "item": "Jugo de frutas",
                            "price": 6,
-                           "picture": "./src/assets/menuPics/juice.jpg" 
+                           "picture": "/menuPics/juice.jpg" 
                         },
                         {
                             "item": "Té Helado",
                             "price": 4,
-                            "picture": "./src/assets/menuPics/icedtea.jpg" 
+                            "picture": "/menuPics/icedtea.jpg" 
                         },
                         {
                             "item": "Smoothie de frutas",
                             "price": 8,
-                            "picture": "./src/assets/menuPics/smoothie.jpg" 
+                            "picture": "/menuPics/smoothie.jpg" 
                         }
                     ]
                 },
@@ -48,12 +48,12 @@
                         {
                            "item": "Sándwich jamón/queso",
                            "price": 10,
-                           "picture": "./src/assets/menuPics/hamncheese.jpg" 
+                           "picture": "/menuPics/hamncheese.jpg" 
                         },
                         {
                             "item": "Sándwich vegetariano",
                             "price": 8,
-                            "picture": "./src/assets/menuPics/veg.jpg" 
+                            "picture": "/menuPics/veg.jpg" 
                         }
                     ]
                 },
@@ -63,12 +63,12 @@
                         {
                            "item": "Muffin",
                            "price": 7,
-                           "picture": "./src/assets/menuPics/muffin.jpg" 
+                           "picture": "/menuPics/muffin.jpg" 
                         },
                         {
                             "item": "Croissant",
                             "price": 5,
-                            "picture": "./src/assets/menuPics/croissant.jpg" 
+                            "picture": "/menuPics/croissant.jpg" 
                         }
                     ]
                 }
@@ -82,17 +82,17 @@
                         {
                            "item": "Americano",
                            "price": 5,
-                           "picture": "./src/assets/menuPics/americano.jpg" 
+                           "picture": "/menuPics/americano.jpg" 
                         },
                         {
                             "item": "Catpuccino",
                             "price": 6,
-                            "picture": "./src/assets/menuPics/catpuccino.jpg" 
+                            "picture": "/menuPics/catpuccino.jpg" 
                         },
                         {
                             "item": "Meowcaccino",
                             "price": 7,
-                            "picture": "./src/assets/menuPics/mocca.jpg" 
+                            "picture": "/menuPics/mocca.jpg" 
                         }
                     ]
                 },
@@ -102,17 +102,17 @@
                         {
                             "item": "Milkshake",
                             "price": 8,
-                            "picture": "./src/assets/menuPics/smoothie.jpg" 
+                            "picture": "/menuPics/milkshake.jpg" 
                         },
                         {
                             "item": "Bebida 500ml",
                             "price": 5,
-                            "picture": "./src/assets/menuPics/icedtea.jpg" 
+                            "picture": "/menuPics/bebida.jpg" 
                         },
                         {
                             "item": "Agua mineral 500ml",
                             "price": 2,
-                            "picture": "./src/assets/menuPics/icedtea.jpg" 
+                            "picture": "/menuPics/water.jpg" 
                         }
                     ]
                 },
@@ -122,12 +122,12 @@
                         {
                            "item": "Hamburguesa simple",
                            "price": 10,
-                           "picture": "./src/assets/menuPics/hamncheese.jpg"
+                           "picture": "/menuPics/simpleburg.jpg"
                         },
                         {
                             "item": "Hamburguesa doble",
                             "price": 15,
-                            "picture": "./src/assets/menuPics/hamncheese.jpg" 
+                            "picture": "/menuPics/doubleburg.jpg" 
                         }
                     ]
                 },
@@ -137,17 +137,17 @@
                         {
                            "item": "Papas fritas",
                            "price": 5,
-                           "picture": "./src/assets/menuPics/veg.jpg" 
+                           "picture": "/menuPics/fries.jpg" 
                         },
                         {
                             "item": "Aros de cebolla",
                             "price": 5,
-                            "picture": "./src/assets/menuPics/veg.jpg" 
+                            "picture": "/menuPics/onionrings.jpg" 
                         },
                         {
                             "item": "Empanadas de queso",
                             "price": 5,
-                            "picture": "./src/assets/menuPics/veg.jpg"
+                            "picture": "/menuPics/empanadas.jpg"
                         }
                     ]
                 }

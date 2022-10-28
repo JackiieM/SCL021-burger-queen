@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { v4 as uuid } from 'uuid';
 import { useState } from "react";
 
 export const ListMenu = ({element, order, setOrder}) => {
@@ -21,14 +22,14 @@ export const ListMenu = ({element, order, setOrder}) => {
         const patty = {
             "Vacuno": "Vacuno",
             "Pollo": "Pollo",
-            "Vegetariana": "Vegetariana"
+            "Veggie": "Veggie"
         }
         const extraHuevo = {
-            "extra huevo": "Si",
+            "Extra huevo": "Si",
             "No": "No",
         }
         const extraQueso = {
-            "extra queso": "Si",
+            "Extra queso": "Si",
             "No": "No",
         }
         const options = ["1","2","3"];
@@ -46,6 +47,7 @@ export const ListMenu = ({element, order, setOrder}) => {
             hideClass: { backdrop: 'swal2-noanimation' },
         })
         if(selectedItem === "Hamburguesa simple" || selectedItem === "Hamburguesa doble"){
+            
             const { value: burger } = Extras.fire({
                 title: <h1 className='popUpTitle'>Tipo de hamburguesa</h1>,
                 currentProgressStep: 0,
@@ -92,15 +94,16 @@ export const ListMenu = ({element, order, setOrder}) => {
                             price: parseInt(selectedItemCost), 
                             quantity: 1, 
                             patty: hamburguesa[0], 
-                            extraEgg: hamburguesa[1], 
-                            extraCheese: hamburguesa[2]}
+                            extraE: hamburguesa[1], 
+                            extraC: hamburguesa[2],
+                            id: uuid()}
                         ])
                     })
                 })
             })  
         }
         else if(exists === -1){
-            setOrder([...order, {item:selectedItem, price: parseInt(selectedItemCost), quantity: 1}])
+            setOrder([...order, {item:selectedItem, price: parseInt(selectedItemCost), quantity: 1, id: uuid()}])
         } else {
             let orderTmp = [...order];
             orderTmp[exists].quantity = orderTmp[exists].quantity +1

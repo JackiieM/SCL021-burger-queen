@@ -13,8 +13,9 @@ const firebaseConfig = {
   const db = getFirestore(app);
 
   // Add a new document in collection 
-const newOrder = async(table, customer, order, state) => {
-   await setDoc(doc(db, "orders", customer), {
+const newOrder = async(table, customer, order, state, id) => {
+   await setDoc(doc(db, "orders", id), {
+    orderId: id,
     customer: customer,
     table: table,
     time: Timestamp.fromDate(new Date()),

@@ -19,7 +19,7 @@
 header ul{
     background: var(--darkBrown);
     font-family: var(--mainFont);
-    font-size: calc(2rem + 1.5vw);
+    font-size: calc(2rem + 1vw);
     color: var(--bgColor);
     display: flex;
     flex-direction: row;
@@ -35,7 +35,7 @@ ul{
     justify-content: flex-end;
 }
 #backBtn {
-    width: 70%;
+    width: 60%;
 }
 /*----------------------MENU---------------------*/
 #ordersBody {
@@ -43,6 +43,7 @@ ul{
     height: 100vh;
     display: flex;
     flex-direction: row;
+    
 }
 #menuItems {
     width: 50%;
@@ -241,7 +242,7 @@ hr{
     background: var(--delBtn);
     border: none;
     width: 25%;
-    height: 5rem;
+    height: 4.5rem;
     border-radius: 25px;
     font-family: var(--mainFont);
     color: var(--bgColor);
@@ -250,7 +251,7 @@ hr{
 #sendCont {
     display: flex;
     justify-content: center;
-    margin: 2%;
+    margin: 0.5%;
 }
 #sendBtn {
     background: var(--okBtn);
@@ -272,14 +273,22 @@ hr{
     font-family: var(--mainFont);
     font-size: calc(1rem + 1vw);
 }
-
 .swalInput {
     font-family: var(--mainFont);
     background: var(--highLight);
     font-size: calc(0.5rem + 1vw);
 }
-.swalProgress{
-    background: var(--darkBrown);
-    font-size: large;
+.extraCont {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0% 3% 1% 0%;
+    
 }
-
+.extra {
+    font-family: var(--mainFont);
+    font-size: calc(0.5rem + 1vw);
+    color: var(--textColor);
+    
+}
