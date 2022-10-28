@@ -1,3 +1,6 @@
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { v4 as uuid } from 'uuid';
 import { useState } from "react";
 
 export const ListMenu = ({element, order, setOrder}) => {
@@ -10,12 +13,97 @@ export const ListMenu = ({element, order, setOrder}) => {
 
     // Esta función añade items al pedido
     const addOrder = (event) => {
+        const MySwal = withReactContent(Swal)
         const selectedItem = event.target.getAttribute("id");
         const selectedItemCost = event.target.getAttribute("cost");
         const exists = order.findIndex(item => item.item === selectedItem);
+        const hamburguesa = [];
 
-        if(exists === -1){
-            setOrder([...order, {item:selectedItem, price: selectedItemCost, quantity: 1}])
+        const patty = {
+            "Vacuno": "Vacuno",
+            "Pollo": "Pollo",
+            "Veggie": "Veggie"
+        }
+        const extraHuevo = {
+            "Extra huevo": "Si",
+            "No": "No",
+        }
+        const extraQueso = {
+            "Extra queso": "Si",
+            "No": "No",
+        }
+        const options = ["1","2","3"];
+        const Extras = MySwal.mixin({
+            progressSteps: options,
+            confirmButtonText: "Continuar",
+            color: "#3a1f08",
+            background: "#dfd2cc",
+            confirmButtonColor: "#af7d64",
+            customClass: {
+                input: "swalInput",
+                progressStep: "swalProgress"
+            },
+            showClass: { backdrop: 'swal2-noanimation' },
+            hideClass: { backdrop: 'swal2-noanimation' },
+        })
+        if(selectedItem === "Hamburguesa simple" || selectedItem === "Hamburguesa doble"){
+            
+            const { value: burger } = Extras.fire({
+                title: <h1 className='popUpTitle'>Tipo de hamburguesa</h1>,
+                currentProgressStep: 0,
+                input: "radio",
+                inputOptions: patty,
+                inputValidator: (value) => {
+                    if (!value) {
+                      return 'Por favor selecciona una opción'
+                    }
+                }
+            })
+            .then(burger => {
+                hamburguesa.push(burger.value)
+                const { value: egg } =  Extras.fire({
+                    title: <h1 className='popUpTitle'>¿Desea añadir huevo?</h1>,
+                    currentProgressStep: 1,
+                    input: "radio",
+                    inputOptions: extraHuevo,
+                    inputValidator: (value) => {
+                        if (!value) {
+                          return 'Por favor selecciona una opción'
+                        }
+                    }
+                })
+                .then(egg => {
+                    hamburguesa.push(egg.value)
+                    const { value: cheese } =  Extras.fire({
+                        title: <h1 className='popUpTitle'>¿Desea añadir queso?</h1>,
+                        currentProgressStep: 2,
+                        input: "radio",
+                        inputOptions: extraQueso,
+                        inputValidator: (value) => {
+                            if (!value) {
+                              return 'Por favor selecciona una opción'
+                            }
+                        }
+                    })
+                    .then(cheese => {
+                        hamburguesa.push(cheese.value)
+                    })
+                    .then(()=>{
+                        setOrder([...order, 
+                            {item: selectedItem, 
+                            price: parseInt(selectedItemCost), 
+                            quantity: 1, 
+                            patty: hamburguesa[0], 
+                            extraE: hamburguesa[1], 
+                            extraC: hamburguesa[2],
+                            id: uuid()}
+                        ])
+                    })
+                })
+            })  
+        }
+        else if(exists === -1){
+            setOrder([...order, {item:selectedItem, price: parseInt(selectedItemCost), quantity: 1, id: uuid()}])
         } else {
             let orderTmp = [...order];
             orderTmp[exists].quantity = orderTmp[exists].quantity +1
@@ -42,7 +130,7 @@ export const ListMenu = ({element, order, setOrder}) => {
                 </div> 
             )
         )
-    }
+    }   
             </div>
         </>
     )

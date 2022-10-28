@@ -22,7 +22,7 @@ export const Orders = () => {
                     <ul>
                         <li>Pedido Nuevo</li>
                         <li>Pedidos Listos</li>
-                        <Link to="/" id="backBtnCont" ><img id="backBtn" src="./src/assets/backBtn.png"/></Link>
+                        <Link to="/" id="backBtnCont" ><img id="backBtn" src="/backBtn.png"/></Link>
                     </ul>
                 </nav>
             </header>

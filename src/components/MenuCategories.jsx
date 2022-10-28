@@ -9,12 +9,12 @@ export const MenuCategories = ({selection, order, setOrder}) => {
     const pmMenu = lunch.lunch
     
     const [toggleCategories, setToggleCategories] = useState();
+    const [toggleDialog, setToggleDialog] = useState(false)
+
     useEffect(() => {
         setToggleCategories(selection)
 
     }, [selection])
-
-
     //
     //console.log(MenuList.menu)
     //console.log("Desestructurado:",breakfast, lunch)
@@ -26,7 +26,11 @@ export const MenuCategories = ({selection, order, setOrder}) => {
             {
                 MenuData && amMenu.map( element => 
                     (
-                        < ListMenu element={element} order={order} setOrder={setOrder} key={element.category}/>
+                        <ListMenu 
+                        element={element} 
+                        order={order} 
+                        setOrder={setOrder} 
+                        key={element.category}/>
                     )
                 )
             }
@@ -34,17 +38,23 @@ export const MenuCategories = ({selection, order, setOrder}) => {
             </div>
             ) : (
                 <div className="category">
-                {
+                {   
                     MenuData && pmMenu.map( element => 
                         (
-                            < ListMenu element={element} order={order} setOrder={setOrder} key={element.category}/>
+                            <ListMenu 
+                            element={element} 
+                            order={order} 
+                            setOrder={setOrder} 
+                            key={element.category}/>
                         )
                     )
                 }
     
                 </div>
             )}
-
+            <dialog open={toggleDialog ? "open" : false}>
+                <p>holi</p>
+            </dialog>
         </>
     )
 }
