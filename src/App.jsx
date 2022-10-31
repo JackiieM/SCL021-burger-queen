@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Routes } from "react-router-dom";
 
 // Local imports
@@ -9,11 +10,11 @@ import { Kitchen } from './kitchen/Kitchen.jsx'
 export const App = () => {
   return (
     <>
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="pedidos" element={<Orders/>} />
-      <Route path="cocina" element={<Kitchen/>} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="pedidos" element={<Orders/>} />
+        <Route path="cocina" element={<Kitchen/>} />
+      </Routes>
     </>
    
   )

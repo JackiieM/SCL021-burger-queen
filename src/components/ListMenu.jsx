@@ -1,13 +1,15 @@
+import React from 'react';
+import { useState } from "react";
+
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { v4 as uuid } from 'uuid';
-import { useState } from "react";
 
 export const ListMenu = ({element, order, setOrder}) => {
 
     // Esta función muestra/oculta los dropdown de cada categoría
     const [visibility, setVisibility] = useState(false)
-    const dropDownStay = (event) => {
+    const dropDownStay = () => {
         setVisibility(!visibility)
     }
 
@@ -48,7 +50,7 @@ export const ListMenu = ({element, order, setOrder}) => {
         })
         if(selectedItem === "Hamburguesa simple" || selectedItem === "Hamburguesa doble"){
             
-            const { value: burger } = Extras.fire({
+            Extras.fire({
                 title: <h1 className='popUpTitle'>Tipo de hamburguesa</h1>,
                 currentProgressStep: 0,
                 input: "radio",
@@ -57,11 +59,11 @@ export const ListMenu = ({element, order, setOrder}) => {
                     if (!value) {
                       return 'Por favor selecciona una opción'
                     }
-                }
+                } 
             })
             .then(burger => {
                 hamburguesa.push(burger.value)
-                const { value: egg } =  Extras.fire({
+                Extras.fire({
                     title: <h1 className='popUpTitle'>¿Desea añadir huevo?</h1>,
                     currentProgressStep: 1,
                     input: "radio",
@@ -74,7 +76,7 @@ export const ListMenu = ({element, order, setOrder}) => {
                 })
                 .then(egg => {
                     hamburguesa.push(egg.value)
-                    const { value: cheese } =  Extras.fire({
+                    Extras.fire({
                         title: <h1 className='popUpTitle'>¿Desea añadir queso?</h1>,
                         currentProgressStep: 2,
                         input: "radio",
@@ -118,10 +120,10 @@ export const ListMenu = ({element, order, setOrder}) => {
             <h2 className="categoryName">{element.category}</h2>
             <img className="dropDown"src="https://api.iconify.design/mdi/chevron-down.svg?color=%233a1f08&width=40&height=40"/>
         </button>
-        <div className={`dropdownContent ${visibility ? "active" : ""}`}>
-        {element.items.map( (menuItem, key=menuItem.item) =>
+        <div data-testid="dropDownList" className={`dropdownContent ${visibility === true ? "active" : ""}`}>
+        {element.items.map( (menuItem) =>
             (
-                <div className="item" key={menuItem.item} id={menuItem.item} cost={menuItem.price} onClick={(event)=> addOrder(event)}>
+                <div data-testid="itemToAdd" className="item" key={menuItem.item} id={menuItem.item} cost={menuItem.price} onClick={(event)=> addOrder(event)}>
                     {/*comentario*/}
                     {/*console.log(element.items)*/}
                     <img className="itemImg" src={menuItem.picture} id={menuItem.item} cost={menuItem.price}/>

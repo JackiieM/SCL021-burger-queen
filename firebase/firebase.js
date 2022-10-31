@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, Timestamp } from "firebase/firestore";
+import { getFirestore, doc, setDoc, Timestamp, collection, getDocs } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyBq58JGX4myrbrc9xVdtEfUdKySszHo6h0",
     authDomain: "purrfect-cafe-c2bc4.firebaseapp.com",
@@ -23,5 +23,14 @@ const newOrder = async(table, customer, order, state, id) => {
     state: state,
   });
 }
+  // Get data
+const getOrders = async() => {
+  const querySnapshot = await getDocs(collection(db, "orders"));
+  const ordersData = []
+  querySnapshot.forEach((order) => {
+   ordersData.push(order.data())
+  })
+  return ordersData
+}
 
-export {newOrder}
+export {newOrder, getOrders}

@@ -1,0 +1,102 @@
+:root {
+    --cafeFont: 'Pacifico', cursive;
+    --mainFont: 'Josefin Sans', sans-serif;
+    --bgColor: #eeece7;
+    --highLight: #dfd2cc;
+    --lightBrown: #af7d64;
+    --darkBrown: #522600;
+    --textColor: #3a1f08;
+    --delBtn: #CA3228;
+    --okBtn: #7CAF64;
+}
+/*-------------------- HEADER -----------------*/
+#kitchenCont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    justify-content: center;
+}
+
+header ul{
+    background: var(--darkBrown);
+    font-family: var(--mainFont);
+    font-size: calc(2rem + 1vw);
+    color: var(--bgColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+}
+ul{
+    padding: 1% 2% 1% 2%;
+}
+#backBtnCont{
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+#backBtn {
+    width: 60%;
+}
+/*-------------------- BODY -----------------*/
+#ordersToPrepareCont {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 2%;
+    overflow: scroll;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.pendingOrder {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 1%;
+ 
+}
+.pendingOrderHead {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    background: var(--lightBrown);
+    justify-content: center;
+    align-items: center;
+}
+.pendingOrderHead h2 {
+    font-family: var(--mainFont);
+    background: var(--bgColor);
+    margin: 2%;
+    padding: 2%;
+    color: var(--darkBrown);
+}
+.pendingItems {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--highLight);
+    height: 20rem;
+}
+.pendingItems p {
+    color: var(--textColor);
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1vw);
+}
+.pendingOrderFooter {
+    width: 100%;
+    background: var(--lightBrown);
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+.pendingOrderFooter button {
+    width: 40%;
+    background: var(--okBtn);
+    border: none;
+    border-radius: 10px;
+    height: 3rem;
+    font-family: var(--mainFont);
+    font-size: calc(1rem + 1vw);
+    color: var(--bgColor);
+}

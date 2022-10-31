@@ -25,7 +25,7 @@ body {
     background: var(--bgColor);
     background-image: url("/background.png");
     background-size:auto;
-    overflow: hidden;
+    
 }
 #root{
     display: flex;

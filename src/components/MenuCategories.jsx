@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import React from 'react';
+import { v4 as uuid } from 'uuid';
+
 import MenuData from "../../data/menu.json";
 import { ListMenu } from "./ListMenu";
 //import { MenuItemsComp } from "./MenuItems"; 
@@ -8,20 +10,14 @@ export const MenuCategories = ({selection, order, setOrder}) => {
     const amMenu = breakfast.breakfast
     const pmMenu = lunch.lunch
     
-    const [toggleCategories, setToggleCategories] = useState();
-    const [toggleDialog, setToggleDialog] = useState(false)
 
-    useEffect(() => {
-        setToggleCategories(selection)
-
-    }, [selection])
     //
     //console.log(MenuList.menu)
     //console.log("Desestructurado:",breakfast, lunch)
     //console.log(pmMenu)
     return (
         <>
-        {toggleCategories ? (            
+        {selection ? (            
         <div className="category">
             {
                 MenuData && amMenu.map( element => 
@@ -30,7 +26,7 @@ export const MenuCategories = ({selection, order, setOrder}) => {
                         element={element} 
                         order={order} 
                         setOrder={setOrder} 
-                        key={element.category}/>
+                        />
                     )
                 )
             }
@@ -45,16 +41,13 @@ export const MenuCategories = ({selection, order, setOrder}) => {
                             element={element} 
                             order={order} 
                             setOrder={setOrder} 
-                            key={element.category}/>
+                            />
                         )
                     )
                 }
     
                 </div>
             )}
-            <dialog open={toggleDialog ? "open" : false}>
-                <p>holi</p>
-            </dialog>
         </>
     )
 }

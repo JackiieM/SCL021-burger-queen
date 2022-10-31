@@ -1,3 +1,4 @@
+import React from 'react';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { v4 as uuid } from 'uuid';
@@ -83,7 +84,7 @@ export const OrderList = ({order, setOrder}) => {
                         <option value="5">5</option>
                     </select>
                 </div>
-                <div id="itemsCont">
+                <div data-testid="orderedItems" id="itemsCont">
                     <OrderItems order={order} setOrder={setOrder}/>
                 </div>
                 <div id="bottomCont">
