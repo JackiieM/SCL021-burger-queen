@@ -1,7 +1,7 @@
 {
   "projects": {
-    "burger": "purrfect-cafe-c2bc4",
-    "default": "purrfect-cafe-c2bc4"
+    "burger": "purrfect-cat-cafe",
+    "default": "purrfect-cat-cafe"
   },
   "targets": {},
   "etags": {}

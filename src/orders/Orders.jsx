@@ -1,8 +1,11 @@
+import React from 'react';
 import { useState } from "react"
 import { Link } from "react-router-dom"
+
 import { MenuCategories } from '../components/MenuCategories'
 import { OrderList } from "../components/OrderList"
 import './orders.css'
+
 export const Orders = () => {
     const [menuChoice, setMenuChoice] = useState(true);
     const setAm = () => {
@@ -21,7 +24,7 @@ export const Orders = () => {
                 <nav>
                     <ul>
                         <li>Pedido Nuevo</li>
-                        <li>Pedidos Listos</li>
+                        <Link to="ready"><li>Pedidos Listos</li></Link>
                         <Link to="/" id="backBtnCont" ><img id="backBtn" src="/backBtn.png"/></Link>
                     </ul>
                 </nav>

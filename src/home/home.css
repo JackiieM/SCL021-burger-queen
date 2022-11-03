@@ -8,7 +8,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-
 }
 /*------------------------ Presets --------------------------------*/
 :root {
@@ -25,8 +24,9 @@ body {
     background: var(--bgColor);
     background-image: url("/background.png");
     background-size:auto;
-    overflow: hidden;
+    overflow-y: scroll;
 }
+
 #root{
     display: flex;
     justify-content: center;
