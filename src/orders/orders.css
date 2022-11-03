@@ -204,7 +204,7 @@ li {
 #itemsCont {
     width: 100%;
     background: var(--highLight);
-    height: 23rem;
+    height: 20rem;
     overflow-y: scroll;
 }
 .descriptionCont {

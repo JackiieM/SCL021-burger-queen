@@ -70,7 +70,7 @@ ul{
     height: 100%;
     width:100%;
     font-family: var(--mainFont);
-    font-size: calc(1rem+1vw);
+    font-size: calc(0.8rem + 1vw);
     background: var(--bgColor);
     padding: 2%;
     color: var(--darkBrown);

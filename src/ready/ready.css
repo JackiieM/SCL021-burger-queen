@@ -1,0 +1,83 @@
+:root {
+    --cafeFont: 'Pacifico', cursive;
+    --mainFont: 'Josefin Sans', sans-serif;
+    --bgColor: #eeece7;
+    --highLight: #dfd2cc;
+    --lightBrown: #af7d64;
+    --darkBrown: #522600;
+    --textColor: #3a1f08;
+    --delBtn: #CA3228;
+    --okBtn: #7CAF64;
+}
+#readyCont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.readyCard {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--highLight);
+    margin: 1%;
+}
+
+.readyCardDetails {
+    background: var(--lightBrown);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--mainFont);
+    color: var(--bgColor);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: calc(0.1rem + 1vw);
+    padding: 2%;
+}
+.readyCardItems {
+    width:100%;
+    height: 15rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--mainFont);
+    color: var(--textColor);
+    font-size: calc(0.6rem + 1vw);
+}
+.readyItemsCont {
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+.cardItem {
+    width: 70%;
+}
+.extrasCard{
+    align-self: flex-end;
+    margin: 2%;
+}
+
+.readyCardServe {
+    background: var(--lightBrown);
+    font-family: var(--mainFont);
+    color: var(--bgColor);
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+}
+
+.readyCardServe button {
+    background: var(--okBtn);
+    height: 2rem;
+    border: none;
+    color: var(--bgColor);
+    width: 30%;
+    border-radius: 2rem;
+    font-family: var(--mainFont);
+    font-size: calc(0.3rem + 1vw);
+}
