@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import "./ready.css";
 
 import { getReadyToServe } from '../../firebase/firebase';
 import { ReadyCard } from '../components/ReadyCard.jsx';
@@ -30,7 +31,7 @@ export const Ready = () => {
                 <nav>
                     <ul>
                         <Link to="/pedidos"><li>Pedido Nuevo</li></Link>
-                        <li>Pedidos Listos</li>
+                        <li>Pedidos Listos({toServe.length})</li>
                         <Link to="/" id="backBtnCont" ><img id="backBtn" src="/backBtn.png"/></Link>
                     </ul>
                 </nav>

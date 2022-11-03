@@ -1,9 +1,10 @@
 import React from 'react';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 import { MenuCategories } from '../components/MenuCategories'
 import { OrderList } from "../components/OrderList"
+import { getReadyToServe } from '../../firebase/firebase';
 import './orders.css'
 
 export const Orders = () => {
@@ -18,13 +19,31 @@ export const Orders = () => {
 // y luego mandar la data en order por props a donde imprimo la lista actual del pedido
     const [order, setOrder] = useState([]);
 
+    const [toServe, setToServe] = useState([])
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await getReadyToServe()
+                .then(data => {
+                    if (data !== toServe){
+                        setToServe(data)
+                    }
+                })
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData();
+    }, []);
+
     return (
         <div id="ordersCont">
             <header>
                 <nav>
                     <ul>
                         <li>Pedido Nuevo</li>
-                        <Link to="ready"><li>Pedidos Listos</li></Link>
+                        <Link to="ready"><li>Pedidos Listos({toServe.length})</li></Link>
                         <Link to="/" id="backBtnCont" ><img id="backBtn" src="/backBtn.png"/></Link>
                     </ul>
                 </nav>
