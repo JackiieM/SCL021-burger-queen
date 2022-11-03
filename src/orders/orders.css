@@ -29,6 +29,9 @@ header ul{
 ul{
     padding: 1% 2% 1% 2%;
 }
+li {
+    color: var(--bgColor);
+}
 #backBtnCont{
     width: 10%;
     display: flex;

@@ -45,7 +45,6 @@ ul{
     width: 100%;
     flex-direction: row;
     gap: 2%;
-    overflow: scroll;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -57,31 +56,63 @@ ul{
  
 }
 .pendingOrderHead {
+    height: 5rem;
     display: flex;
     flex-direction: row;
-    gap: 5%;
+    gap: 0.5%;
     background: var(--lightBrown);
     justify-content: center;
     align-items: center;
+    padding: 2%;
+    text-align: center;
 }
 .pendingOrderHead h2 {
+    height: 100%;
+    width:100%;
     font-family: var(--mainFont);
+    font-size: calc(1rem+1vw);
     background: var(--bgColor);
-    margin: 2%;
     padding: 2%;
     color: var(--darkBrown);
 }
+
 .pendingItems {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     background: var(--highLight);
     height: 20rem;
+    padding: 3%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: var(--darkBrown);
 }
+
 .pendingItems p {
     color: var(--textColor);
     font-family: var(--mainFont);
     font-size: calc(1rem + 1vw);
+}
+.pendingItemsCont {
+    width: 100%;
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.burgerDetail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.burgerDetail p {
+    font-size: calc(0.5rem + 1vw);
+}
+hr{
+    width: 100%;
+    margin: 1% 0%;
 }
 .pendingOrderFooter {
     width: 100%;

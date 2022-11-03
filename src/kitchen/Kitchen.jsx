@@ -4,21 +4,28 @@ import { Link } from 'react-router-dom';
 import "./kitchen.css"
 
 import { getOrders } from '../../firebase/firebase';
-import { PendingItems } from '../components/PendingItems';
+import { PendingOrder } from '../components/PendingOrder';
 
 export const Kitchen = () => {
     const [pendingOrders, setPendingOrders] = useState([])
 
     useEffect(() => {
-        const getData = async() => {
-            await getOrders()
-            .then(data => {
-                setPendingOrders(data)
-            })
+        const fetchData = async () => {
+            try {
+                await getOrders()
+                .then(data => {
+                    if (data !== pendingOrders){
+                        setPendingOrders(data)
+                    }
+                })
+            } catch (error) {
+                console.log(error)
+            }
         }
-        getData()
+        fetchData();
     }, []);
-    console.log(pendingOrders)
+
+
     return (
         <div id="kitchenCont">
             <header>
@@ -30,21 +37,7 @@ export const Kitchen = () => {
                 </nav>
             </header>
             <div id="ordersToPrepareCont">
-                {pendingOrders.map(order => (
-                    <div className='pendingOrder'>
-                        <div className='pendingOrderHead'>
-                            <h2>Clientx: {order.customer}</h2>
-                            <h2>Mesa: {order.table}</h2>
-                        </div>
-                        <div className='pendingItems'>
-                            <PendingItems order={order}/>
-                        </div>
-                        <div className="pendingOrderFooter">
-                            <button>Listo</button>
-                        </div>
-                    </div>
-                ))}
-
+                <PendingOrder pendingOrders={pendingOrders} setPendingOrders={setPendingOrders}/>
             </div>
         </div>        
     )

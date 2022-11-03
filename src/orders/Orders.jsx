@@ -24,7 +24,7 @@ export const Orders = () => {
                 <nav>
                     <ul>
                         <li>Pedido Nuevo</li>
-                        <li>Pedidos Listos</li>
+                        <Link to="ready"><li>Pedidos Listos</li></Link>
                         <Link to="/" id="backBtnCont" ><img id="backBtn" src="/backBtn.png"/></Link>
                     </ul>
                 </nav>

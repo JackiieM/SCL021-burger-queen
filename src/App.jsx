@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from './home/Home.jsx'
 import { Orders } from './orders/Orders.jsx'
 import { Kitchen } from './kitchen/Kitchen.jsx'
+import { Ready } from './ready/Ready.jsx';
 
 // ROUTER
 export const App = () => {
@@ -14,6 +15,7 @@ export const App = () => {
         <Route path="/" element={<Home/>} />
         <Route path="pedidos" element={<Orders/>} />
         <Route path="cocina" element={<Kitchen/>} />
+        <Route path="pedidos/ready" element={<Ready/>} />
       </Routes>
     </>
    

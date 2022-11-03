@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 
 
 import { Orders } from "./Orders";
-import { OrderItems } from "../components/OrderItems";
+
 
 describe("Orders", () => {
     it("Renderiza la pantalla de pedidos", () => {
